@@ -1,10 +1,10 @@
 import pytest
 
 
-@pytest.fixture(scope="class", autouse=True)
-def class_message():
+@pytest.fixture(scope="session", autouse=True)
+def session_message():
     """
-        设置每一个类开始和结束分别打印message
+        设置每一个会话开始和结束分别打印message
     """
     print("计算开始")
     yield
